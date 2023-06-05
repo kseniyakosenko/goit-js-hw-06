@@ -13,13 +13,14 @@ function submitHandler(event) {
     const password = event.currentTarget.elements.password;
 
     if (email.value === '' || password.value === '') {
+        event.preventDefault();
         alert('Всі поля повинні бути заповнені!!!');
+
     }
         else {
             profile.email = email.value;
             profile.password = password.value;
 
-            console.log(profile);
-        }
-        event.currentTarget.reset();
+    }
+    console.log(profile);
 }
